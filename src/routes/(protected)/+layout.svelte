@@ -5,8 +5,6 @@
 
 	let loggedIn = false;
 
-	console.log('protected');
-
 	if (browser) {
 		console.log('FROM PROTECTED', $firebaseAuthStore);
 		if ($firebaseAuthStore.user !== null) loggedIn = true;
