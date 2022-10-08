@@ -5,6 +5,14 @@ module.exports = {
     extend: {
       fontFamily: {
         'monts': "Montserrat"
+      },
+      colors: {
+        "lkud-red": {
+          primary: "#8D153A"
+        },
+        "lkud-yellow": {
+          primary: "#FFBE29"
+        }
       }
     },
   },
