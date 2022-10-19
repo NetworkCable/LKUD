@@ -1,13 +1,13 @@
 // import { page } from '$app/stores';
-import admin from 'firebase-admin';
+import { initializeApp, getApps, type ServiceAccount, cert } from 'firebase-admin/app';
+import { getAuth } from 'firebase-admin/auth';
 
 import config from '$config/config.json';
 import { error, json } from '@sveltejs/kit';
 
-if (!admin.apps.length) {
-	admin.initializeApp({
-		// @ts-ignore
-		credential: admin.credential.cert(config)
+if (getApps().length === 0) {
+	initializeApp({
+		credential: cert(config as ServiceAccount)
 	});
 }
 
@@ -15,12 +15,10 @@ export async function GET({ request }: any) {
 	const token = request.headers.get('firebase-token');
 
 	if (!token) throw error(403, 'No token');
+	const auth = getAuth();
 
-	return admin
-		.auth()
-		.verifyIdToken(token)
-		.then((decoded) => {
-			console.log(decoded.email);
-			return json({ user: decoded });
-		});
+	return auth.verifyIdToken(token).then((decoded) => {
+		console.log(decoded.email);
+		return json({ user: decoded });
+	});
 }
