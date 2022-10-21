@@ -9,7 +9,7 @@ export const initilizeFirebase = async () => {
 
 	if ((await get(firebaseStore)) !== null) return;
 
-	let firebaseConfig = {
+	const firebaseConfig = {
 		apiKey: 'AIzaSyBWvMiQKaIj9Itm2c7Ld5YfLFq1Zhnrk88',
 		authDomain: 'lankan-urban-dictionary.firebaseapp.com',
 		databaseURL: 'https://lankan-urban-dictionary.firebaseio.com',
