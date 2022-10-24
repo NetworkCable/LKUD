@@ -1,7 +1,7 @@
 <script>
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
-	import { firebaseAuthStore, user } from '$stores/auth.store';
+	import { firebaseAuthStore } from '$stores/auth.store';
 
 	let loggedIn = false;
 
