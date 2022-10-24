@@ -1,6 +1,7 @@
 <script>
 	import Button from '$lib/components/common/Button.svelte';
 	import Container from '$lib/components/common/Container.svelte';
+	import Input from '$lib/components/common/Input.svelte';
 </script>
 
 <Container>
@@ -14,5 +15,6 @@
 		<a href="/profile">
 			<Button>Profile</Button>
 		</a>
+		<Input />
 	</div>
 </Container>
