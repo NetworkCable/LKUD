@@ -10,8 +10,9 @@ api.interceptors.request.use(
 		if (browser) {
 			const firebaseToken = await get(firebaseAuthStore)?.user?.getIdToken();
 
-			// @ts-ignore
-			config.headers['firebase-token'] = firebaseToken;
+			if (config && config.headers) {
+				config.headers['firebase-token'] = firebaseToken;
+			}
 		}
 
 		return config;
