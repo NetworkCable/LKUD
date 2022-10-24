@@ -1,4 +1,4 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp, getApp, getApps } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
 import { firebaseAuthStore, firebaseStore } from '$stores/auth.store';
@@ -20,8 +20,8 @@ export const initilizeFirebase = async () => {
 		measurementId: 'G-6THGL5DTFH'
 	};
 
-	const app = initializeApp(firebaseConfig);
-	const auth = getAuth();
+	const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
+	const auth = getAuth(app);
 
 	firebaseStore.set(app);
 
