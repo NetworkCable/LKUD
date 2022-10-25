@@ -4,7 +4,7 @@
 
 <div class="w-full">
 	<div class="h-screen flex flex-col w-full">
-		<div class="w-full bg-lkud-red-primary px-12 py-12 flex-grow flex flex-col">
+		<div class="w-full bg-lkud-red-primary px-12 pt-12 pb-8 flex-grow flex flex-col">
 			<div class="border-y-4 py-4 h-3/4 border-lkud-yellow-primary flex flex-col">
 				<div class="overflow-hidden">
 					<h1 class="uppercase text-5xl font-semibold text-lkud-yellow-primary">Lankan</h1>
