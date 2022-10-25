@@ -16,8 +16,10 @@
 		<div class="col-span-4">
 			<Sidebar />
 		</div>
-		<div class="col-span-8 py-4 bg-lkud-white-primary">
-			<slot />
+		<div class="col-span-8 pt-8 bg-lkud-white-primary">
+			<Container>
+				<slot />
+			</Container>
 		</div>
 	</main>
 {/if}
