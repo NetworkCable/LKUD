@@ -15,6 +15,5 @@
 		<a href="/profile">
 			<Button>Profile</Button>
 		</a>
-		<Input />
 	</div>
 </Container>
