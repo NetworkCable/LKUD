@@ -1,10 +1,8 @@
 <script>
 	import Button from '$lib/components/common/Button.svelte';
-	import Container from '$lib/components/common/Container.svelte';
-	import Input from '$lib/components/common/Input.svelte';
 </script>
 
-<Container>
+<div>
 	<div class="text-2xl font-bold font-monts">Lankan urban dict</div>
 
 	<div class="w-full max-w-md flex flex-col gap-3">
@@ -16,4 +14,4 @@
 			<Button>Profile</Button>
 		</a>
 	</div>
-</Container>
+</div>

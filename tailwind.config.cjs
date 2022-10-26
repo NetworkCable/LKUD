@@ -19,6 +19,12 @@ module.exports = {
 				},
 				'lkud-gray': {
 					primary: '#C4C4C4'
+				},
+				'lkud-orange': {
+					primary: '#FF7300'
+				},
+				'lkud-white': {
+					primary: '#F5F5F5'
 				}
 			}
 		}
