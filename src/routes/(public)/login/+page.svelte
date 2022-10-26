@@ -1,5 +1,6 @@
 <script>
 	import { goto } from '$app/navigation';
+	import Button from '$lib/components/common/Button.svelte';
 	import { firebaseAuthStore } from '$stores/auth.store';
 	import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 	import { onMount } from 'svelte';
@@ -30,5 +31,5 @@
 {#if !loading}
 	<div>Login</div>
 
-	<button on:click={signUp}>Login with google</button>
+	<Button on:click={signUp}>Login with google</Button>
 {/if}
