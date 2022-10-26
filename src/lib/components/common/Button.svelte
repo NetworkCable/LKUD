@@ -5,12 +5,19 @@
 </script>
 
 <button
-	class={`${width} ${padding} ${
-		variant === 'primary'
-			? 'bg-lkud-red-primary text-lkud-yellow-primary'
-			: ' bg-lkud-yellow-primary text-lkud-red-primary'
-	}  font-monts uppercase font-medium text-2xl`}
+	class={`${width} ${padding} font-monts uppercase font-medium text-2xl`}
+	class:primary={variant === 'primary'}
+	class:secondary={variant !== 'primary'}
 	on:click
 >
 	<slot />
 </button>
+
+<style>
+	.primary {
+		@apply bg-lkud-red-primary text-lkud-yellow-primary;
+	}
+	.secondary {
+		@apply bg-lkud-yellow-primary text-lkud-red-primary;
+	}
+</style>
