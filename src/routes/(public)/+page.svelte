@@ -1,5 +1,6 @@
 <script>
 	import Button from '$lib/components/common/Button.svelte';
+	import InputTag from '$lib/components/common/InputTag.svelte';
 </script>
 
 <div>
@@ -13,5 +14,6 @@
 		<a href="/profile">
 			<Button>Profile</Button>
 		</a>
+		<InputTag value="test" />
 	</div>
 </div>
