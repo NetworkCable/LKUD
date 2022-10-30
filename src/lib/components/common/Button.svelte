@@ -1,19 +1,19 @@
-<script>
-	export let variant = 'primary';
-	export let width = 'w-full';
-	export let padding = 'py-2';
+<script lang="ts">
+	export let variant: string = 'primary';
+	export let width: string = 'w-full';
+	export let padding: string = 'py-2';
 </script>
 
 <button
 	class={`${width} ${padding} font-monts uppercase font-medium text-2xl`}
 	class:primary={variant === 'primary'}
-	class:secondary={variant !== 'primary'}
+	class:secondary={variant === 'secondary'}
 	on:click
 >
 	<slot />
 </button>
 
-<style>
+<style lang="postcss">
 	.primary {
 		@apply bg-lkud-red-primary text-lkud-yellow-primary;
 	}
